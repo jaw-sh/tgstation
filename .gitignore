@@ -231,3 +231,8 @@ tools/LinuxOneShot/Database
 tools/LinuxOneShot/TGS_Config
 tools/LinuxOneShot/TGS_Instances
 tools/LinuxOneShot/TGS_Logs
+/.vs/SS13KF/v16/Browse.VC.db
+/.vs/SS13KF/v16/Browse.VC.db-shm
+/.vs/SS13KF/v16/Browse.VC.db-wal
+/.vs/SS13KF/v16/Browse.VC.opendb
+/.vs/slnx.sqlite
