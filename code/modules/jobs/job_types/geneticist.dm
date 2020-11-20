@@ -28,6 +28,7 @@
 	uniform = /obj/item/clothing/under/rank/rnd/geneticist
 	shoes = /obj/item/clothing/shoes/sneakers/white
 	suit =  /obj/item/clothing/suit/toggle/labcoat/genetics
+	suit_store =  /obj/item/flashlight/pen
 	l_pocket = /obj/item/sequence_scanner
 
 	backpack = /obj/item/storage/backpack/genetics
