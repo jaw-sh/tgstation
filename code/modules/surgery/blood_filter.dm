@@ -31,7 +31,9 @@
 	if(target.reagents?.total_volume)
 		for(var/blood_chem in target.reagents.reagent_list)
 			var/datum/reagent/chem = blood_chem
-			target.reagents.remove_reagent(chem.type, min(chem.volume * 0.22, 10))
+			//target.reagents.remove_reagent(chem.type, min(chem.volume * 0.22, 10))
+			// KF: Remove the annoying fall-off in filtering blood.
+			target.reagents.remove_reagent(chem.type, min(chem.volume, 10))
 	display_results(user, target, "<span class='notice'>The [tool] pings as it finishes filtering [target]'s blood.</span>",
 		"<span class='notice'>The [tool] pings as it stops pumping your blood.</span>",
 		"The [tool] pings as it stops pumping.")
