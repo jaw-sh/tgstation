@@ -98,6 +98,7 @@ PROBABILITY REVOLUTION 2
 PROBABILITY CULT 2
 PROBABILITY CHANGELING 2
 PROBABILITY WIZARD 4
+PROBABILITY HERESY 4
 PROBABILITY MONKEY 0
 PROBABILITY METEOR 0
 PROBABILITY EXTENDED 0
@@ -124,6 +125,7 @@ CONTINUOUS CULT
 CONTINUOUS CHANGELING
 CONTINUOUS WIZARD
 #CONTINUOUS MONKEY
+CONTINUOUS HERESY
 
 ##Note: do not toggle continuous off for these modes, as they have no antagonists and would thus end immediately!
 
@@ -145,6 +147,7 @@ MIDROUND_ANTAG CULT
 MIDROUND_ANTAG CHANGELING
 MIDROUND_ANTAG WIZARD
 #MIDROUND_ANTAG  MONKEY
+MIDROUND_ANTAG HERESY
 
 ## Uncomment these for overrides of the minimum / maximum number of players in a round type.
 ## If you set any of these occasionally check to see if you still need them as the modes
@@ -184,6 +187,9 @@ MIDROUND_ANTAG WIZARD
 
 #MIN_POP METEOR 0
 #MAX_POP METEOR -1
+
+#MIN_POP HERESY 20
+#MAX_POP HERESY -1
 
 ## Setting at least one mode to be playable at 0/1 players is required.
 #MIN_POP EXTENDED 0
