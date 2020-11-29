@@ -10,7 +10,7 @@
 	false_report_weight = 20 //Reports of traitors are pretty common.
 	restricted_jobs = list("Cyborg")//They are part of the AI if he is traitor so are they, they use to get double chances
 	protected_jobs = list("Prisoner","Security Officer", "Warden", "Detective", "Head of Security", "Captain",
-		"Bouncer", "Customs Officer", "Engine Security", "Laboratory Security", "Police Medic")
+		"Bouncer", "Customs Officer", "Engine Security", "Laboratory Security", "Police Medic", "Chief Medical Officer")
 	required_players = 0
 	required_enemies = 1
 	recommended_enemies = 4

@@ -233,7 +233,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				else if(gender == FEMALE)
 					dispGender = "Female"
 				else
-					dispGender = "Other"
+					// KF: Removed obtuse prefence selection.
+					gender = MALE
+					dispGender = "Male"
 				dat += "<b>Gender:</b> <a href='?_src_=prefs;preference=gender'>[dispGender]</a>"
 				if(gender == PLURAL || gender == NEUTER)
 					dat += "<BR><b>Body Type:</b> <a href='?_src_=prefs;preference=body_type'>[body_type == MALE ? "Male" : "Female"]</a>"
@@ -1586,15 +1588,13 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					if(unlock_content)
 						toggles ^= MEMBER_PUBLIC
 				if("gender")
-					var/list/friendlyGenders = list("Male" = "male", "Female" = "female", "Other" = "plural")
-					var/pickedGender = input(user, "Choose your gender.", "Character Preference", gender) as null|anything in friendlyGenders
-					if(pickedGender && friendlyGenders[pickedGender] != gender)
-						gender = friendlyGenders[pickedGender]
-						underwear = random_underwear(gender)
-						undershirt = random_undershirt(gender)
-						socks = random_socks()
-						facial_hairstyle = random_facial_hairstyle(gender)
-						hairstyle = random_hairstyle(gender)
+					// KF: Removed obtuse prefence selection.
+					gender = (gender == MALE ? FEMALE : MALE)
+					underwear = random_underwear(gender)
+					undershirt = random_undershirt(gender)
+					socks = random_socks()
+					facial_hairstyle = random_facial_hairstyle(gender)
+					hairstyle = random_hairstyle(gender)
 				if("body_type")
 					if(body_type == MALE)
 						body_type = FEMALE
@@ -1668,7 +1668,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					save_preferences()
 
 				if("keybindings_reset")
-					var/choice = tgalert(user, "Would you prefer 'hotkey' or 'classic' defaults?", "Setup keybindings", "Hotkey", "Classic", "Cancel")
+					var/choice = tgui_alert(user, "Would you prefer 'hotkey' or 'classic' defaults?", "Setup keybindings", list("Hotkey", "Classic", "Cancel"))
 					if(choice == "Cancel")
 						ShowChoices(user)
 						return

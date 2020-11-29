@@ -18,6 +18,10 @@
 	display_order = JOB_DISPLAY_ORDER_QUARTERMASTER
 	bounty_types = CIV_JOB_RANDOM
 
+	mail_goodies = list(
+		/obj/item/circuitboard/machine/emitter = 3
+	)
+
 /datum/outfit/job/quartermaster
 	name = "Quartermaster"
 	jobtype = /datum/job/qm
@@ -31,4 +35,13 @@
 	backpack_contents = list(/obj/item/modular_computer/tablet/preset/cargo=1)
 
 	chameleon_extras = /obj/item/stamp/qm
+
+
+// KF: Mail goodies.
+/datum/job/quartermaster/get_mail_goodies(mob/recipient)
+	. = ..()
+	// Strange Reagent if the pet is dead.
+	for(var/mob/living/simple_animal/sloth/citrus/staff_pet in GLOB.dead_mob_list)
+		. += list(/datum/reagent/medicine/strange_reagent = 20)
+		break
 

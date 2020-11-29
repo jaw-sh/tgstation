@@ -11,7 +11,7 @@ GLOBAL_LIST_INIT(slot2type, list("head" = /obj/item/clothing/head/changeling, "w
 	false_report_weight = 10
 	restricted_jobs = list("AI", "Cyborg")
 	protected_jobs = list("Prisoner", "Security Officer", "Warden", "Detective", "Head of Security", "Captain",
-		"Bouncer", "Customs Officer", "Engine Security", "Laboratory Security", "Police Medic")
+		"Bouncer", "Customs Officer", "Engine Security", "Laboratory Security", "Police Medic", "Chief Medical Officer")
 	required_players = 15
 	required_enemies = 1
 	recommended_enemies = 3

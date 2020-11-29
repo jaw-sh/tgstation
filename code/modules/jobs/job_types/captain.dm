@@ -24,6 +24,11 @@
 
 	display_order = JOB_DISPLAY_ORDER_CAPTAIN
 
+	mail_goodies = list(
+		/obj/item/clothing/mask/cigarette/cigar/havana = 40,
+		/obj/item/storage/fancy/cigarettes/cigars/havana = 10
+	)
+
 /datum/job/captain/get_access()
 	return get_all_accesses()
 
@@ -61,3 +66,12 @@
 	mask = /obj/item/clothing/mask/gas/atmos/captain
 	suit = /obj/item/clothing/suit/space/hardsuit/swat/captain
 	suit_store = /obj/item/tank/internals/oxygen
+
+
+// KF: Mail goodies.
+/datum/job/captain/get_mail_goodies(mob/recipient)
+	. = ..()
+	// Strange Reagent if the pet is dead.
+	for(var/mob/living/simple_animal/hostile/retaliate/mutt/captains/staff_pet in GLOB.dead_mob_list)
+		. += list(/datum/reagent/medicine/strange_reagent = 20)
+		break

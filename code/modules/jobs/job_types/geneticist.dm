@@ -19,6 +19,10 @@
 	display_order = JOB_DISPLAY_ORDER_GENETICIST
 	bounty_types = CIV_JOB_SCI
 
+	mail_goodies = list(
+		/obj/item/storage/box/monkeycubes = 10
+	)
+
 /datum/outfit/job/geneticist
 	name = "Geneticist"
 	jobtype = /datum/job/geneticist
@@ -28,7 +32,6 @@
 	uniform = /obj/item/clothing/under/rank/rnd/geneticist
 	shoes = /obj/item/clothing/shoes/sneakers/white
 	suit =  /obj/item/clothing/suit/toggle/labcoat/genetics
-	suit_store =  /obj/item/flashlight/pen
 	l_pocket = /obj/item/sequence_scanner
 
 	backpack = /obj/item/storage/backpack/genetics

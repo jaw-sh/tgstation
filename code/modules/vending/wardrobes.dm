@@ -48,6 +48,7 @@
 	product_ads = "Make those blood stains look fashionable!!"
 	vend_reply = "Thank you for using the MediDrobe!"
 	products = list(/obj/item/clothing/accessory/pocketprotector = 4,
+					/obj/item/flashlight/pen/paramedic = 4,
 					/obj/item/storage/backpack/duffelbag/med = 4,
 					/obj/item/storage/backpack/medic = 4,
 					/obj/item/storage/backpack/satchel/med = 4,
@@ -125,14 +126,23 @@
 	icon_state = "cargodrobe"
 	product_ads = "Upgraded Assistant Style! Pick yours today!;These shorts are comfy and easy to wear, get yours now!"
 	vend_reply = "Thank you for using the CargoDrobe!"
-	products = list(/obj/item/clothing/suit/hooded/wintercoat/cargo = 3,
-					/obj/item/clothing/under/rank/cargo/tech = 3,
-					/obj/item/clothing/under/rank/cargo/tech/skirt = 3,
-					/obj/item/clothing/shoes/sneakers/black = 3,
-					/obj/item/clothing/gloves/fingerless = 3,
-					/obj/item/clothing/head/soft = 3,
-					/obj/item/radio/headset/headset_cargo = 3)
-	premium = list(/obj/item/clothing/under/rank/cargo/miner = 3)
+	products = list(
+		// KF: Add mailbag to vending machine.
+		/obj/item/storage/bag/mail = 3,
+		/obj/item/clothing/suit/hooded/wintercoat/cargo = 3,
+		/obj/item/clothing/under/rank/cargo/tech = 3,
+		/obj/item/clothing/under/rank/cargo/tech/skirt = 3,
+		/obj/item/clothing/shoes/sneakers/black = 3,
+		/obj/item/clothing/gloves/fingerless = 3,
+		/obj/item/clothing/head/soft = 3,
+		/obj/item/radio/headset/headset_cargo = 3
+	)
+	premium = list(
+		/obj/item/clothing/under/rank/cargo/miner = 3,
+		// KF: Add mailman clothes here for fun.
+		/obj/item/clothing/head/mailman = 1,
+		/obj/item/clothing/under/misc/mailman = 1
+	)
 	refill_canister = /obj/item/vending_refill/wardrobe/cargo_wardrobe
 	payment_department = ACCOUNT_CAR
 /obj/item/vending_refill/wardrobe/cargo_wardrobe

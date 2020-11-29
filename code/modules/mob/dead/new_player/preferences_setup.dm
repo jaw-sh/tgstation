@@ -52,7 +52,8 @@
 
 ///Setup a hardcore random character and calculate their hardcore random score
 /datum/preferences/proc/hardcore_random_setup(mob/living/carbon/human/character, antagonist, is_latejoiner)
-	var/rand_gender = pick(list(MALE, FEMALE, PLURAL))
+	// KF: Removed obtuse prefence selection.
+	var/rand_gender = pick(list(MALE, FEMALE))
 	random_character(rand_gender, antagonist)
 	select_hardcore_quirks()
 	hardcore_survival_score = hardcore_survival_score ** 1.2 //30 points would be about 60 score

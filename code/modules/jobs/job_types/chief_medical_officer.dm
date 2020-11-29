@@ -28,6 +28,17 @@
 	display_order = JOB_DISPLAY_ORDER_CHIEF_MEDICAL_OFFICER
 	bounty_types = CIV_JOB_MED
 
+	mail_goodies = list(
+		/obj/item/scalpel/alien = 5,
+		/obj/item/hemostat/alien = 5,
+		/obj/item/retractor/alien = 5,
+		/obj/item/circular_saw/alien = 5,
+		/obj/item/surgicaldrill/alien = 5,
+		/obj/item/cautery/alien = 5,
+		/obj/effect/spawner/lootdrop/organ_spawner = 3,
+		/obj/effect/spawner/lootdrop/memeorgans = 3
+	)
+
 /datum/outfit/job/cmo
 	name = "Chief Medical Officer"
 	jobtype = /datum/job/cmo
@@ -41,13 +52,14 @@
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 	suit = /obj/item/clothing/suit/toggle/labcoat/cmo
 	l_hand = /obj/item/storage/firstaid/medical
-	suit_store = /obj/item/flashlight/pen/paramedic
 	backpack_contents = list(/obj/item/melee/classic_baton/telescopic=1, /obj/item/modular_computer/tablet/preset/advanced/command=1)
 
 	backpack = /obj/item/storage/backpack/medic
 	satchel = /obj/item/storage/backpack/satchel/med
 	duffelbag = /obj/item/storage/backpack/duffelbag/med
 	box = /obj/item/storage/box/survival/medical
+
+	implants = list(/obj/item/implant/mindshield)
 
 	chameleon_extras = list(/obj/item/gun/syringe, /obj/item/stamp/cmo)
 
@@ -59,3 +71,11 @@
 	suit_store = /obj/item/tank/internals/oxygen
 	r_pocket = /obj/item/flashlight/pen/paramedic
 
+
+// KF: Mail goodies.
+/datum/job/cmo/get_mail_goodies(mob/recipient)
+	. = ..()
+	// Strange Reagent if the pet is dead.
+	for(var/mob/living/simple_animal/pet/cat/runtime/staff_pet in GLOB.dead_mob_list)
+		. += list(/datum/reagent/medicine/strange_reagent = 20)
+		break

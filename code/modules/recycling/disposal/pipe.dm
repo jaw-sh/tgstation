@@ -8,7 +8,7 @@
 	density = FALSE
 	obj_flags = CAN_BE_HIT | ON_BLUEPRINTS
 	dir = NONE			// dir will contain dominant direction for junction pipes
-	max_integrity = 200
+	max_integrity = 400
 	armor = list(MELEE = 25, BULLET = 10, LASER = 10, ENERGY = 100, BOMB = 0, BIO = 100, RAD = 100, FIRE = 90, ACID = 30)
 	layer = DISPOSAL_PIPE_LAYER			// slightly lower than wires and other pipes
 	flags_1 = RAD_PROTECT_CONTENTS_1 | RAD_NO_CONTAMINATE_1

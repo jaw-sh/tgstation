@@ -19,6 +19,15 @@
 	display_order = JOB_DISPLAY_ORDER_PARAMEDIC
 	bounty_types = CIV_JOB_MED
 
+	mail_goodies = list(
+		/obj/item/reagent_containers/hypospray/medipen = 20,
+		/obj/item/reagent_containers/hypospray/medipen/oxandrolone = 10,
+		/obj/item/reagent_containers/hypospray/medipen/salacid = 10,
+		/obj/item/reagent_containers/hypospray/medipen/salbutamol = 10,
+		/obj/item/reagent_containers/hypospray/medipen/penacid = 10,
+		/obj/item/reagent_containers/hypospray/medipen/survival/luxury = 5
+	)
+
 /datum/outfit/job/paramedic
 	name = "Paramedic"
 	jobtype = /datum/job/paramedic
@@ -32,7 +41,6 @@
 	belt = /obj/item/storage/belt/medical/paramedic
 	id = /obj/item/card/id
 	l_pocket = /obj/item/pda/medical
-	suit_store = /obj/item/flashlight/pen/paramedic
 	backpack_contents = list(/obj/item/roller=1)
 	pda_slot = ITEM_SLOT_LPOCKET
 

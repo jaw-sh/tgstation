@@ -16,6 +16,16 @@
 
 	display_order = JOB_DISPLAY_ORDER_CLOWN
 
+	mail_goodies = list(
+		/obj/item/food/grown/banana = 100,
+		/obj/item/food/pie/cream = 50,
+		/obj/item/clothing/shoes/clown_shoes/combat = 10,
+		/obj/item/reagent_containers/spray/waterflower/lube = 20, // lube
+		/obj/item/melee/transforming/energy/sword/bananium = 1,
+		/obj/item/shield/energy/bananium = 1,
+		/obj/item/reagent_containers/spray/waterflower/superlube = 1 // Superlube, good lord.
+	)
+
 
 /datum/job/clown/after_spawn(mob/living/carbon/human/H, mob/M)
 	. = ..()
@@ -34,7 +44,7 @@
 	backpack_contents = list(
 		/obj/item/stamp/clown = 1,
 		/obj/item/reagent_containers/spray/waterflower = 1,
-		/obj/item/reagent_containers/food/snacks/grown/banana = 1,
+		/obj/item/food/grown/banana = 1,
 		/obj/item/instrument/bikehorn = 1,
 		)
 

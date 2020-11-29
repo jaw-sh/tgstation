@@ -22,8 +22,14 @@
 	display_order = JOB_DISPLAY_ORDER_SECURITY_OFFICER
 	bounty_types = CIV_JOB_SEC
 
-	// KF: Used instead of user preferences to determine security officer department.
+	/// KF: Used instead of user preferences to determine security officer department.
 	var/department = null
+
+	/// KF: Mail goodies for sec, inherited by department.
+	mail_goodies = list(
+		/obj/item/clothing/mask/whistle = 5,
+		/obj/item/gun/energy/taser = 1
+	)
 
 /datum/job/officer/get_access()
 	var/list/L = list()
@@ -74,7 +80,7 @@ GLOBAL_LIST_INIT(available_depts, list(SEC_DEPT_ENGINEERING, SEC_DEPT_MEDICAL, S
 			ears = /obj/item/radio/headset/headset_sec/alt/department/service
 			dep_access = list(ACCESS_HYDROPONICS, ACCESS_BAR, ACCESS_KITCHEN)
 			destination = /area/crew_quarters/cafeteria
-			spawn_point = /area/crew_quarters/cafeteria
+			spawn_point = locate(/obj/effect/landmark/start/depsec/service) in GLOB.department_security_spawns
 			accessory = /obj/item/clothing/accessory/armband/hydro
 		if(SEC_DEPT_SUPPLY)
 			ears = /obj/item/radio/headset/headset_sec/alt/department/supply
@@ -102,7 +108,7 @@ GLOBAL_LIST_INIT(available_depts, list(SEC_DEPT_ENGINEERING, SEC_DEPT_MEDICAL, S
 		var/turf/T
 		if(spawn_point)
 			T = get_turf(spawn_point)
-			H.Move(T)
+			H.forceMove(T)
 		else
 			var/list/possible_turfs = get_area_turfs(destination)
 			while (length(possible_turfs))
@@ -112,9 +118,9 @@ GLOBAL_LIST_INIT(available_depts, list(SEC_DEPT_ENGINEERING, SEC_DEPT_MEDICAL, S
 					break
 				possible_turfs.Cut(I,I+1)
 	if(department)
-		to_chat(M, "<b>You have been assigned to [department]!</b>")
+		to_chat(M, "You are a member of the [department] Department! You are first and foremost a member of your department, and you should assist your department before dealing with threats outside of it.")
 	else
-		to_chat(M, "<b>You have not been assigned to any department. Patrol the halls and help where needed.</b>")
+		to_chat(M, "You have not been assigned to any department. As a common security officer, you should roam public areas and help anyone that may need it.")
 
 
 

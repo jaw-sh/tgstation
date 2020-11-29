@@ -1,5 +1,5 @@
-// KF: Slobbermutt
-/mob/living/simple_animal/hostile/mutt
+/// KF: A mutt to replace Renault in the Captain's office.
+/mob/living/simple_animal/hostile/retaliate/mutt
 	name = "\improper mutt"
 	gender = MALE // sprite has testicles
 	real_name = "mutt"
@@ -14,12 +14,12 @@
 	stop_automated_movement_when_pulled = 1
 	stat_attack = SOFT_CRIT
 	robust_searching = 1
-	health = 100
-	maxHealth = 100
-	harm_intent_damage = 5
+	health = 200
+	maxHealth = 200
+	harm_intent_damage = 15
 	obj_damage = 0
-	melee_damage_lower = 10
-	melee_damage_upper = 15
+	melee_damage_lower = 15
+	melee_damage_upper = 20
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
 	attack_sound = 'sound/weapons/bite.ogg'
@@ -31,19 +31,19 @@
 	move_to_delay = 1
 	charger = TRUE
 
-/mob/living/simple_animal/hostile/mutt/add_cell_sample()
+/mob/living/simple_animal/hostile/retaliate/mutt/add_cell_sample()
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_PUG, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)
 
-/mob/living/simple_animal/hostile/mutt/FindTarget(list/possible_targets, HasTargetsList = 0)
+/mob/living/simple_animal/hostile/retaliate/mutt/FindTarget(list/possible_targets, HasTargetsList = 0)
 	// Regular mutts shouldn't be aggressive.
 	. = list()
 
-/mob/living/simple_animal/hostile/mutt/captains
+/mob/living/simple_animal/hostile/retaliate/mutt/captains
 	name = "Slobbermutt"
 	desc = "A vicious-looking dog, fangs bared."
 
-/mob/living/simple_animal/hostile/mutt/captains/ListTargets()
-	. = list()
+/mob/living/simple_animal/hostile/retaliate/mutt/captains/ListTargets()
+	. = ..()
 	// Slobbermutt hunts for two targets:
 	// 1. Anyone holding the disk (filtered by CanAttack later).
 	var/turf/OT = get_turf(src)
@@ -68,7 +68,7 @@
 
 	return .
 
-/mob/living/simple_animal/hostile/mutt/captains/FindTarget(list/possible_targets, HasTargetsList = 0)
+/mob/living/simple_animal/hostile/retaliate/mutt/captains/FindTarget(list/possible_targets, HasTargetsList = 0)
 	. = list()
 	if(!HasTargetsList)
 		possible_targets = ListTargets()
@@ -84,7 +84,7 @@
 	GiveTarget(Target)
 	return Target
 
-/mob/living/simple_animal/hostile/mutt/captains/CanAttack(atom/the_target)
+/mob/living/simple_animal/hostile/retaliate/mutt/captains/CanAttack(atom/the_target)
 	. = ..()
 
 	// Nothing that will default AI won't attack is valid to us.
@@ -106,10 +106,10 @@
 
 	return TRUE
 
-/mob/living/simple_animal/hostile/mutt/captains/Aggro()
+/mob/living/simple_animal/hostile/retaliate/mutt/captains/Aggro()
 	. = ..()
 	a_intent = INTENT_HARM
 
-/mob/living/simple_animal/hostile/mutt/captains/LoseAggro()
+/mob/living/simple_animal/hostile/retaliate/mutt/captains/LoseAggro()
 	. = ..()
 	a_intent = INTENT_HELP

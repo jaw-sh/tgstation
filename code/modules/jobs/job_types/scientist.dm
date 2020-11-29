@@ -22,6 +22,13 @@
 	display_order = JOB_DISPLAY_ORDER_SCIENTIST
 	bounty_types = CIV_JOB_SCI
 
+	/// KF: Mail goodies.
+	mail_goodies = list(
+		/obj/item/raw_anomaly_core/random = 5,
+		/obj/item/disk/tech_disk/spaceloot = 5,
+		/obj/item/camera_bug = 5
+	)
+
 /datum/outfit/job/scientist
 	name = "Scientist"
 	jobtype = /datum/job/scientist

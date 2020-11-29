@@ -7,7 +7,7 @@
 		#include "map_files\Mining\Lavaland.dmm"
 		#include "map_files\debug\runtimestation.dmm"
 		#include "map_files\debug\multiz.dmm"
-		#include "map_files\Deltastation\DeltaStation2.dmm"
+		#include "map_files\Deltastation\DeltaStationKiwi.dmm"
 		#include "map_files\MetaStation\MetaStation.dmm"
 		#include "map_files\PubbyStation\PubbyStation.dmm"
 		#include "map_files\IceBoxStation\IceBoxStation.dmm"

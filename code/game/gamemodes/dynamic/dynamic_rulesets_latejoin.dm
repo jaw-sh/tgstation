@@ -54,7 +54,7 @@
 	antag_datum = /datum/antagonist/traitor
 	antag_flag = ROLE_TRAITOR
 	protected_roles = list("Security Officer", "Warden", "Head of Personnel", "Detective", "Head of Security", "Captain",
-		"Bouncer", "Customs Officer", "Engine Security", "Laboratory Security", "Police Medic")
+		"Bouncer", "Customs Officer", "Engine Security", "Laboratory Security", "Police Medic", "Chief Medical Officer")
 	restricted_roles = list("AI","Cyborg")
 	required_candidates = 1
 	weight = 7
@@ -193,7 +193,7 @@
 	antag_datum = /datum/antagonist/heretic
 	antag_flag = ROLE_HERETIC
 	protected_roles = list("Security Officer", "Warden", "Head of Personnel", "Detective", "Head of Security", "Captain", "Prisoner",
-		"Bouncer", "Customs Officer", "Engine Security", "Laboratory Security", "Police Medic")
+		"Bouncer", "Customs Officer", "Engine Security", "Laboratory Security", "Police Medic", "Chief Medical Officer")
 	restricted_roles = list("AI","Cyborg")
 	required_candidates = 1
 	weight = 4

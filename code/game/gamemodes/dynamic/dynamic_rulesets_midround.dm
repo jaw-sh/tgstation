@@ -165,7 +165,7 @@
 	antag_datum = /datum/antagonist/traitor
 	antag_flag = ROLE_TRAITOR
 	protected_roles = list("Prisoner", "Security Officer", "Warden", "Detective", "Head of Security", "Captain",
-		"Bouncer", "Customs Officer", "Engine Security", "Laboratory Security", "Police Medic")
+		"Bouncer", "Customs Officer", "Engine Security", "Laboratory Security", "Police Medic", "Chief Medical Officer")
 	restricted_roles = list("Cyborg", "AI", "Positronic Brain")
 	required_candidates = 1
 	weight = 7
@@ -218,7 +218,7 @@
 	antag_flag = ROLE_FAMILIES
 	protected_roles = list("Prisoner", "Head of Personnel")
 	restricted_roles = list("Cyborg", "AI", "Security Officer", "Warden", "Detective", "Head of Security", "Captain",
-		"Bouncer", "Customs Officer", "Engine Security", "Laboratory Security", "Police Medic")
+		"Bouncer", "Customs Officer", "Engine Security", "Laboratory Security", "Police Medic", "Chief Medical Officer")
 	required_candidates = 6 // gotta have 'em ALL
 	weight = 1
 	cost = 25
@@ -585,12 +585,12 @@
 /datum/dynamic_ruleset/midround/from_ghosts/abductors/ready(forced = FALSE)
 	if (required_candidates > (dead_players.len + list_observers.len))
 		return FALSE
-	new_team = new
-	if(new_team.team_number > ABDUCTOR_MAX_TEAMS)
-		return MAP_ERROR
 	return ..()
 
 /datum/dynamic_ruleset/midround/from_ghosts/abductors/finish_setup(mob/new_character, index)
+	new_team = new
+	if(new_team.team_number > ABDUCTOR_MAX_TEAMS)
+		return MAP_ERROR
 	if (index == 1) // Our first guy is the scientist.
 		var/datum/antagonist/abductor/scientist/new_role = new
 		new_character.mind.add_antag_datum(new_role, new_team)

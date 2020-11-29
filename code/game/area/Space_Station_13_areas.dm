@@ -772,6 +772,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Pharmacy"
 	icon_state = "pharmacy"
 
+/area/medical/plumbing
+	name = "Plumbing"
+	icon_state = "plumbing"
+
 /area/medical/surgery
 	name = "Surgery"
 	icon_state = "surgery"

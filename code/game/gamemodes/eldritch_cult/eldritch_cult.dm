@@ -5,7 +5,7 @@
 	antag_flag = ROLE_HERETIC
 	false_report_weight = 5
 	protected_jobs = list("Prisoner","Security Officer", "Warden", "Detective", "Head of Security", "Captain",
-		"Bouncer", "Customs Officer", "Engine Security", "Laboratory Security", "Police Medic")
+		"Bouncer", "Customs Officer", "Engine Security", "Laboratory Security", "Police Medic", "Chief Medical Officer")
 	restricted_jobs = list("AI", "Cyborg")
 	required_players = 0
 	required_enemies = 1

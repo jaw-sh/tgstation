@@ -218,14 +218,14 @@ GLOBAL_LIST_INIT(scarySounds, list('sound/weapons/thudswoosh.ogg','sound/weapons
 //If you don't want to fuck up disposals, add to this list, and don't change the order.
 //If you insist on changing the order, you'll have to change every sort junction to reflect the new order. --Pete
 
-GLOBAL_LIST_INIT(TAGGERLOCATIONS, list("Disposals",
-	"Cargo Bay", "QM Office", "Engineering", "CE Office",
-	"Atmospherics", "Security", "HoS Office", "Medbay",
-	"CMO Office", "Chemistry", "Research", "RD Office",
-	"Robotics", "HoP Office", "Library", "Chapel", "Theatre",
-	"Bar", "Kitchen", "Hydroponics", "Janitor Closet","Genetics",
-	"Experimentor Lab", "Toxins", "Dormitories", "Virology",
-	"Xenobiology", "Law Office","Detective's Office"))
+GLOBAL_LIST_INIT(TAGGERLOCATIONS, list("Disposals", // 1
+	"Cargo Bay", "QM Office", "Engineering", "CE Office", // 5
+	"Atmospherics", "Security", "HoS Office", "Medbay", // 9
+	"CMO Office", "Chemistry", "Research", "RD Office", // 13
+	"Robotics", "HoP Office", "Library", "Chapel", "Theatre", // 18
+	"Bar", "Kitchen", "Hydroponics", "Janitor Closet","Genetics", // 23
+	"Experimentor Lab", "Toxins", "Dormitories", "Virology", // 27
+	"Xenobiology", "Law Office","Detective's Office")) // 30
 
 GLOBAL_LIST_INIT(station_prefixes, world.file2list("strings/station_prefixes.txt"))
 
