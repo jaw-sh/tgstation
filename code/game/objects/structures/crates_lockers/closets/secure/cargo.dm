@@ -23,3 +23,4 @@
 	new /obj/item/storage/photo_album/qm(src)
 	new /obj/item/circuitboard/machine/ore_silo(src)
 	new /obj/item/card/id/departmental_budget/car(src)
+	new /obj/item/modular_computer/tablet/preset/cargo(src)
