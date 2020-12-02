@@ -294,6 +294,17 @@
 					/obj/item/gun/energy/disabler)
 	crate_name = "disabler crate"
 
+/datum/supply_pack/security/disabler
+	name = "Handcuff Crate"
+	desc = "A box of 4 handcuffs, for when you really need to arrest everyone. Requires Security access to open."
+	cost = 2000
+	access_view = ACCESS_SECURITY
+	contains = list(/obj/item/restraints/handcuffs,
+					/obj/item/restraints/handcuffs,
+					/obj/item/restraints/handcuffs,
+					/obj/item/restraints/handcuffs)
+	crate_name = "handcuff crate"
+
 /datum/supply_pack/security/forensics
 	name = "Forensics Crate"
 	desc = "Stay hot on the criminal's heels with Nanotrasen's Detective Essentials(tm). Contains a forensics scanner, six evidence bags, camera, tape recorder, white crayon, and of course, a fedora. Requires Security access to open."
@@ -1011,16 +1022,23 @@
 /datum/supply_pack/materials/plasteel20
 	name = "20 Plasteel Sheets"
 	desc = "Reinforce the station's integrity with twenty plasteel sheets!"
-	cost = 7500
-	contains = list(/obj/item/stack/sheet/plasteel/twenty)
+	cost = 5000
+	contains = list(/obj/item/stack/sheet/plasteel/twenty)	
 	crate_name = "plasteel sheets crate"
 
 /datum/supply_pack/materials/plasteel50
 	name = "50 Plasteel Sheets"
 	desc = "For when you REALLY have to reinforce something."
-	cost = 16500
+	cost = 10000
 	contains = list(/obj/item/stack/sheet/plasteel/fifty)
 	crate_name = "plasteel sheets crate"
+
+/datum/supply_pack/materials/Bananium50
+	name = "50 Bananium Sheets"
+	desc = "Great for sending the station into chaos."
+	cost = 15000
+	contains = list(/obj/item/stack/sheet/mineral/bananium/fifty)
+	crate_name = "bananium sheets crate"
 
 /datum/supply_pack/materials/plastic50
 	name = "50 Plastic Sheets"
@@ -1265,6 +1283,20 @@
 	cost = 3000
 	access = ACCESS_MEDICAL
 	contains = list(/obj/machinery/iv_drip/saline)
+
+/datum/supply_pack/medical/organs
+	name = "Organ Variety Pack"
+	desc = "Contains one of each organ. Requires medbay access to open."
+	cost = 7500
+	access = ACCESS_MEDICAL
+	contains = list(/obj/item/organ/stomach,
+		/obj/item/organ/heart,
+		/obj/item/organ/liver,
+		/obj/item/organ/lungs,
+		/obj/item/organ/appendix,
+		/obj/item/organ/eyes,
+		/obj/item/organ/ears,)
+	crate_name = "organ variety pack"
 
 /datum/supply_pack/medical/virus
 	name = "Virus Crate"
@@ -1688,6 +1720,27 @@
 		var/item = pick(contains)
 		new item(C)
 
+/datum/supply_pack/organic/seeds
+	name = "Seeds Crate"
+	desc = "Big things have small beginnings. Contains fourteen different seeds."
+	cost = 1000
+	contains = list(/obj/item/seeds/chili,
+					/obj/item/seeds/cotton,
+					/obj/item/seeds/berry,
+					/obj/item/seeds/corn,
+					/obj/item/seeds/eggplant,
+					/obj/item/seeds/tomato,
+					/obj/item/seeds/soya,
+					/obj/item/seeds/wheat,
+					/obj/item/seeds/wheat/rice,
+					/obj/item/seeds/carrot,
+					/obj/item/seeds/sunflower,
+					/obj/item/seeds/chanter,
+					/obj/item/seeds/potato,
+					/obj/item/seeds/sugarcane)
+	crate_name = "seeds crate"
+	crate_type = /obj/structure/closet/crate/hydroponics
+
 /datum/supply_pack/organic/exoticseeds
 	name = "Exotic Seeds Crate"
 	desc = "Any entrepreneuring botanist's dream. Contains fourteen different seeds, including one replica-pod seed and two mystery seeds!"
@@ -1820,27 +1873,6 @@
 					/obj/item/kirbyplants/random)
 	crate_name = "potted plants crate"
 	crate_type = /obj/structure/closet/crate/wooden
-
-/datum/supply_pack/organic/seeds
-	name = "Seeds Crate"
-	desc = "Big things have small beginnings. Contains fourteen different seeds."
-	cost = 1000
-	contains = list(/obj/item/seeds/chili,
-					/obj/item/seeds/cotton,
-					/obj/item/seeds/berry,
-					/obj/item/seeds/corn,
-					/obj/item/seeds/eggplant,
-					/obj/item/seeds/tomato,
-					/obj/item/seeds/soya,
-					/obj/item/seeds/wheat,
-					/obj/item/seeds/wheat/rice,
-					/obj/item/seeds/carrot,
-					/obj/item/seeds/sunflower,
-					/obj/item/seeds/chanter,
-					/obj/item/seeds/potato,
-					/obj/item/seeds/sugarcane)
-	crate_name = "seeds crate"
-	crate_type = /obj/structure/closet/crate/hydroponics
 
 /datum/supply_pack/organic/randomized/chef/vegetables
 	name = "Vegetables Crate"
@@ -2228,10 +2260,10 @@
 	crate_type = /obj/structure/closet/crate/wooden
 
 /datum/supply_pack/costumes_toys/costume
-	name = "Standard Costume Crate"
+	name = "Clown Costume Crate"
 	desc = "Supply the station's entertainers with the equipment of their trade with these Nanotrasen-approved costumes! Contains a full clown and mime outfit, along with a bike horn and a bottle of nothing."
 	cost = 1000
-	access = ACCESS_THEATRE
+	access = ACCESS_THEATRE	
 	contains = list(/obj/item/storage/backpack/clown,
 					/obj/item/clothing/shoes/clown_shoes,
 					/obj/item/clothing/mask/gas/clown_hat,
@@ -2245,7 +2277,7 @@
 					/obj/item/clothing/suit/toggle/suspenders,
 					/obj/item/reagent_containers/food/drinks/bottle/bottleofnothing,
 					/obj/item/storage/backpack/mime)
-	crate_name = "standard costume crate"
+	crate_name = "clown costume crate"
 	crate_type = /obj/structure/closet/crate/wooden
 
 /datum/supply_pack/costumes_toys/randomised/toys
