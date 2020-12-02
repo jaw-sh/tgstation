@@ -535,7 +535,7 @@ Do not add any of the following in a Pull Request or risk getting the PR closed:
 * Code adding, removing, or updating the availability of alien races/species/human mutants without prior approval. Pull requests attempting to add or remove features from said races/species/mutants require prior approval as well.
 * Code which violates GitHub's [terms of service](https://github.com/site/terms).
 
-Just because something isn't on this list doesn't mean that it's acceptable. Use common sense above all else.
+Don't be a retard.
 
 ## A word on Git
 This repository uses `LF` line endings for all code as specified in the **.gitattributes** and **.editorconfig** files.
