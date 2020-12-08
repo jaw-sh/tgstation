@@ -1037,7 +1037,16 @@
 	name = "50 Bananium Sheets"
 	desc = "Great for sending the station into chaos."
 	cost = 15000
-	contains = list(/obj/item/stack/sheet/mineral/bananium/fifty)
+	contains = list(/obj/item/stack/ore/bananium,
+					/obj/item/stack/ore/bananium,
+					/obj/item/stack/ore/bananium,
+					/obj/item/stack/ore/bananium,
+					/obj/item/stack/ore/bananium,
+					/obj/item/stack/ore/bananium,
+					/obj/item/stack/ore/bananium,
+					/obj/item/stack/ore/bananium,
+					/obj/item/stack/ore/bananium,
+					/obj/item/stack/ore/bananium)	
 	crate_name = "bananium sheets crate"
 
 /datum/supply_pack/materials/plastic50
