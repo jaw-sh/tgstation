@@ -612,6 +612,42 @@
 	category = list("initial", "Medical", "Medical Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
 
+/datum/design/prosthetic_left_arm
+	name = "Prosthetic Left Arm"
+	id = "prosthetic_left_arm"
+	build_type = AUTOLATHE | PROTOLATHE
+	materials = list(/datum/material/iron = 1000)
+	build_path = /obj/item/bodypart/l_arm/robot/surplus
+	category = list("initial", "Medical", "Medical Designs")
+	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
+	
+/datum/design/prosthetic_right_arm
+	name = "Prosthetic Right Arm"
+	id = "prosthetic_right_arm"
+	build_type = AUTOLATHE | PROTOLATHE
+	materials = list(/datum/material/iron = 1000)
+	build_path = /obj/item/bodypart/r_arm/robot/surplus
+	category = list("initial", "Medical", "Medical Designs")
+	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
+
+/datum/design/prosthetic_left_leg
+	name = "Prosthetic Left Leg"
+	id = "prosthetic_left_leg"
+	build_type = AUTOLATHE | PROTOLATHE
+	materials = list(/datum/material/iron = 1000)
+	build_path = /obj/item/bodypart/l_leg/robot/surplus
+	category = list("initial", "Medical", "Medical Designs")
+	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
+	
+/datum/design/prosthetic_right_leg
+	name = "Prosthetic Right Leg"
+	id = "prosthetic_right_leg"
+	build_type = AUTOLATHE | PROTOLATHE
+	materials = list(/datum/material/iron = 1000)
+	build_path = /obj/item/bodypart/r_leg/robot/surplus
+	category = list("initial", "Medical", "Medical Designs")
+	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
+
 /datum/design/beanbag_slug
 	name = "Beanbag Slug"
 	id = "beanbag_slug"

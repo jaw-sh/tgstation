@@ -56,6 +56,7 @@
 	l_pocket = /obj/item/pda/heads/ce
 	ears = /obj/item/radio/headset/heads/ce
 	uniform = /obj/item/clothing/under/rank/engineering/chief_engineer
+	neck = /obj/item/clothing/neck/cloak/ce
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 	head = /obj/item/clothing/head/hardhat/white
 	gloves = /obj/item/clothing/gloves/color/black

@@ -15,14 +15,16 @@
 	drop_sound = 'sound/items/handling/paper_drop.ogg'
 	pickup_sound =  'sound/items/handling/paper_pickup.ogg'
 	mouse_drag_pointer = MOUSE_ACTIVE_POINTER
-	/// destination tagging for the mail sorter
+
+	/// Destination tagging for the mail sorter
 	var/sortTag = 0
-	/// who this mail is for and who can open it
+	/// Who this mail is for and who can open it
+	/// Note: this variable may be blanked once set by QDEL.
 	var/mob/recipient
-	/// how many goodies this mail contains
+	/// How many goodies this mail contains
 	var/goodie_count = 1
-	/// goodies which can be given to anyone.
-	/// the base weight for cash is 56. for there to be a 50/50 chance of getting a department item, they need 56 weight as well.
+	/// Goodies which can be given to anyone.
+	/// The base weight for cash is 56. for there to be a 50/50 chance of getting a department item, they need 56 weight as well.
 	var/list/generic_goodies = list(
 		/obj/item/stack/spacecash/c100 = 30,
 		/obj/item/stack/spacecash/c200 = 20,
@@ -30,12 +32,19 @@
 		/obj/item/stack/spacecash/c1000 = 5,
 		/obj/item/stack/spacecash/c10000 = 1
 	)
+
 	// Overlays (pure fluff)
+	/// Adds the Nanotrasen postmark overlay.
 	var/postmarked = TRUE
+	/// Adds stamps based on stamps_max.
 	var/stamped = TRUE
+	/// List of specific stamp overlay icon_state names.
 	var/list/stamps = list()
+	/// How many stamps we can have one.
 	var/stamp_max = 1
+	/// Horizontal offset for stamps.
 	var/stamp_offset_x = 0
+	/// Vertical offset for stamps.
 	var/stamp_offset_y = 2
 
 /obj/item/mail/envelope
@@ -47,46 +56,44 @@
 
 /obj/item/mail/Initialize()
 	. = ..()
-
 	// Icons
 	// Add some random stamps.
-	if(stamped == TRUE)
-		var/N = rand(1, stamp_max)
-		for(var/i = 1, i <= N, i++)
-			var/X = rand(2, 6)
-			stamps += list("stamp_[X]")
+	if(stamped)
+		for(var/i in 1 to rand(1, stamp_max))
+			var/x = rand(2, 6)
+			stamps += list("stamp_[x]")
 	update_icon()
 
-/obj/item/mail/update_icon()
-	cut_overlays()
+/obj/item/mail/update_overlays()
+	. = ..()
 
 	var/bonus_stamp_offset = 0
-	for(var/S in stamps)
-		var/image/SI = image(
+	for(var/stamp in stamps)
+		var/image/stamp_image = image(
 			icon = icon,
-			icon_state = S,
+			icon_state = stamp,
 			pixel_x = stamp_offset_x,
 			pixel_y = stamp_offset_y + bonus_stamp_offset
 		)
 		// Stops postmarks from inheriting letter color.
 		// http://www.byond.com/docs/ref/#/atom/var/appearance_flags
-		SI.appearance_flags |= RESET_COLOR
-		add_overlay(SI)
+		stamp_image.appearance_flags |= RESET_COLOR
+		. += stamp_image
 		bonus_stamp_offset -= 5
 
 	if(postmarked == TRUE)
-		var/image/PMI = image(
+		var/image/postmark_image = image(
 			icon = icon,
 			icon_state = "postmark",
 			pixel_x = stamp_offset_x + rand(-3, 1),
 			pixel_y = stamp_offset_y + rand(bonus_stamp_offset + 3, 1)
 		)
-		PMI.appearance_flags |= RESET_COLOR
-		add_overlay(PMI)
+		postmark_image.appearance_flags |= RESET_COLOR
+		. += postmark_image
 
 /obj/item/mail/attackby(obj/item/W, mob/user, params)
 	// Destination tagging
-	if(istype(W, /obj/item/dest_tagger))
+	if(!istype(W, /obj/item/dest_tagger))
 		var/obj/item/dest_tagger/O = W
 
 		if(sortTag != O.currTag)
@@ -105,45 +112,46 @@
 		return
 	user.temporarilyRemoveItemFromInventory(src, TRUE)
 	unwrap_contents()
-	for(var/X in contents)
-		var/atom/movable/AM = X
-		user.put_in_hands(AM)
+	for(var/content in contents)
+		user.put_in_hands(content)
 	playsound(src.loc, 'sound/items/poster_ripped.ogg', 50, TRUE)
 	qdel(src)
 
 /obj/item/mail/proc/unwrap_contents()
-	for(var/obj/I in src.GetAllContents())
-		SEND_SIGNAL(I, COMSIG_STRUCTURE_UNWRAPPED)
+	for(var/i in GetAllContents())
+		var/atom/unwrapped_atom = i
+		SEND_SIGNAL(unwrapped_atom, COMSIG_STRUCTURE_UNWRAPPED)
 
 /// Accepts a mob to initialize goodies for a piece of mail.
 /obj/item/mail/proc/initialize_for_recipient(mob/new_recipient)
 	recipient = new_recipient
 	name = "[initial(name)] for [recipient.real_name] ([recipient.job])"
-	var/list/goodies = generic_goodies
+	var/list/goodies = list()
+	goodies += generic_goodies
 
 	var/datum/job/this_job = SSjob.name_occupations[recipient.job]
 	if(this_job)
 		if(this_job.paycheck_department && GLOB.department_colors[this_job.paycheck_department])
 			color = GLOB.department_colors[this_job.paycheck_department]
 		var/list/job_goodies = this_job.get_mail_goodies()
-		if(LAZYLEN(job_goodies))
+		if(job_goodies.len)
 			// certain roles and jobs (prisoner) do not receive generic gifts.
 			if(this_job.exclusive_mail_goodies)
 				goodies = job_goodies
 			else
 				goodies += job_goodies
 
-	for(var/i = 0, i < goodie_count, i++)
-		var/T = pickweight(goodies)
-		if(ispath(T, /datum/reagent))
-			var/obj/item/reagent_containers/TI = new /obj/item/reagent_containers/glass/bottle(src)
-			TI.reagents.add_reagent(T, TI.volume)
-			TI.name = "[TI.reagents.reagent_list[1].name] bottle"
-			new_recipient.log_message("[key_name(new_recipient)] received reagent container [TI.name] in the mail ([T])", LOG_GAME)
+	for(var/i in 1 to goodie_count)
+		var/picked_goodie_type = pickweight(goodies)
+		if(ispath(picked_goodie_type, /datum/reagent))
+			var/obj/item/reagent_containers/reagent_container = new /obj/item/reagent_containers/glass/bottle(src)
+			reagent_container.reagents.add_reagent(picked_goodie_type, reagent_container.volume)
+			reagent_container.name = "[reagent_container.reagents.reagent_list[1].name] bottle"
+			new_recipient.log_message("[key_name(new_recipient)] received reagent container [reagent_container] in the mail ([picked_goodie_type])", LOG_GAME)
 		else
 		//if(ispath(T, /obj))
-			var/atom/movable/TI = new T(src)
-			new_recipient.log_message("[key_name(new_recipient)] received [TI.name] in the mail ([T])", LOG_GAME)
+			var/atom/movable/content = new picked_goodie_type(src)
+			new_recipient.log_message("[key_name(new_recipient)] received [content] in the mail ([content.type])", LOG_GAME)
 			//CRASH("[key_name(new_recipient)] received an unexpected type in the mail ([T])")
 
 	return TRUE
@@ -163,11 +171,12 @@
 /obj/structure/closet/crate/mail/update_icon_state()
 	if(opened)
 		icon_state = "[initial(icon_state)]open"
-	else
-		icon_state = "[initial(icon_state)]sealed"
-		for(var/obj/item/mail/M in src)
-			icon_state = initial(icon_state)
-			break
+		return
+	for(var/obj/item/mail/M in src)
+		// if we have any mail, prefer the icon state with visible mail.
+		icon_state = initial(icon_state)
+		return
+	icon_state = "[initial(icon_state)]sealed"
 
 /obj/structure/closet/crate/mail/full/Initialize()
 	. = ..()
@@ -178,7 +187,7 @@
 			continue
 		mail_recipients += list(H)
 
-	for(var/i = 0, i < 21, i++)
+	for(var/i in 1 to 21)
 		var/obj/item/mail/NM
 		if(rand(0, 10) < 7)
 			NM = new /obj/item/mail(src)

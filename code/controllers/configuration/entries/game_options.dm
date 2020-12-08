@@ -402,3 +402,6 @@
 	min_val = 0
 
 /datum/config_entry/flag/dynamic_config_enabled
+
+// KF: Config flag to disable sound echoing in sound.dm
+/datum/config_entry/flag/disable_sound_reverb

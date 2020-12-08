@@ -65,9 +65,8 @@
 
 	var/bounty_types = CIV_JOB_BASIC
 
-	/// KF: Goodies that can be received via the mail system.
-	// A list(type = weight) list for items.
-	/// Keep the _job definition for this empty and use /obj/item/mail to define general gifts.
+	/// KF: Goodies that can be received via the mail system. A list(type = weight) list for items.
+	// Keep the _job definition for this empty and use /obj/item/mail to define general gifts.
 	var/list/mail_goodies = list()
 	/// KF: If this job's mail goodies compete with generic goodies.
 	var/exclusive_mail_goodies = FALSE

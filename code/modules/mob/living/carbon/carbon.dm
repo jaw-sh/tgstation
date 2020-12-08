@@ -887,7 +887,7 @@
 	do
 		CHECK_DNA_AND_SPECIES(target)
 
-		if (INTERACTING_WITH(src, target))
+		if (DOING_INTERACTION_WITH_TARGET(src, target))
 			return FALSE
 
 		if (target.stat == DEAD || HAS_TRAIT(target, TRAIT_FAKEDEATH))
@@ -956,7 +956,7 @@
 
 /mob/living/carbon/can_be_revived()
 	. = ..()
-	if(!getorgan(/obj/item/organ/brain) && (!mind || !mind.has_antag_datum(/datum/antagonist/changeling)))
+	if(!getorgan(/obj/item/organ/brain) && (!mind || !mind.has_antag_datum(/datum/antagonist/changeling)) || HAS_TRAIT(src, TRAIT_HUSK))
 		return FALSE
 
 /mob/living/carbon/proc/can_defib()

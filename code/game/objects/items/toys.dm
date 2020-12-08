@@ -448,13 +448,14 @@
 	desc = "A cheap, plastic replica of TWO energy swords.  Double the fun!"
 	force = 0
 	throwforce = 0
-	throw_speed = 3
+	throw_speed = 5
 	throw_range = 5
-	two_hand_force = 0
-	attack_verb_continuous = list("attacks", "strikes", "hits")
-	attack_verb_simple = list("attack", "strike", "hit")
+	two_hand_force = 1
+	sharpness = SHARP_EDGED
+	attack_verb_continuous = list("cleaves", "slices", "chops")
+	attack_verb_simple = list("cleave", "slice", "chop")
 
-/obj/item/dualsaber/toy/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+/obj/item/dualsaber/toy/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 1, attack_type = MELEE_ATTACK)
 	return 0
 
 /obj/item/dualsaber/toy/IsReflect() //Stops Toy Dualsabers from reflecting energy projectiles

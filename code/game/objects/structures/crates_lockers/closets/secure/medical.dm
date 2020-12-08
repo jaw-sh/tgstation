@@ -73,7 +73,6 @@
 
 /obj/structure/closet/secure_closet/chief_medical/PopulateContents()
 	..()
-	new /obj/item/clothing/neck/cloak/cmo(src)
 	new /obj/item/clothing/suit/bio_suit/cmo(src)
 	new /obj/item/clothing/head/bio_hood/cmo(src)
 	new /obj/item/clothing/suit/toggle/labcoat/cmo(src)

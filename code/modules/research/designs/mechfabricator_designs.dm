@@ -851,3 +851,13 @@
 	construction_time = 100
 	build_path = /obj/item/assembly/flash/handheld
 	category = list("Misc")
+
+/datum/design/proximity_sensor
+	name = "Proximity Sensor"
+	desc = "For all your Honkbot needs."
+	id = "pSensor"
+	build_type = MECHFAB
+	materials = list(/datum/material/iron = 800, /datum/material/glass = 200)
+	construction_time = 100
+	build_path = /obj/item/assembly/prox_sensor
+	category = list("Misc")
