@@ -1277,20 +1277,6 @@
 	access = ACCESS_MEDICAL
 	contains = list(/obj/machinery/iv_drip/saline)
 
-/datum/supply_pack/medical/organs
-	name = "Organ Variety Pack"
-	desc = "Contains one of each organ. Requires medbay access to open."
-	cost = 7500
-	access = ACCESS_MEDICAL
-	contains = list(/obj/item/organ/stomach,
-		/obj/item/organ/heart,
-		/obj/item/organ/liver,
-		/obj/item/organ/lungs,
-		/obj/item/organ/appendix,
-		/obj/item/organ/eyes,
-		/obj/item/organ/ears,)
-	crate_name = "organ variety pack"
-
 /datum/supply_pack/medical/virus
 	name = "Virus Crate"
 	desc = "Contains twelve different bottles, containing several viral samples for virology research. Also includes seven beakers and syringes. Balled-up jeans not included. Requires CMO access to open."
