@@ -1033,22 +1033,6 @@
 	contains = list(/obj/item/stack/sheet/plasteel/fifty)
 	crate_name = "plasteel sheets crate"
 
-/datum/supply_pack/materials/bananium50
-	name = "10 Bananium Ore "
-	desc = "Great for sending the station into chaos."
-	cost = 15000
-	contains = list(/obj/item/stack/ore/bananium,
-					/obj/item/stack/ore/bananium,
-					/obj/item/stack/ore/bananium,
-					/obj/item/stack/ore/bananium,
-					/obj/item/stack/ore/bananium,
-					/obj/item/stack/ore/bananium,
-					/obj/item/stack/ore/bananium,
-					/obj/item/stack/ore/bananium,
-					/obj/item/stack/ore/bananium,
-					/obj/item/stack/ore/bananium)	
-	crate_name = "bananium ore crate"
-
 /datum/supply_pack/materials/plastic50
 	name = "50 Plastic Sheets"
 	desc = "Build a limitless amount of toys with fifty plastic sheets!"
