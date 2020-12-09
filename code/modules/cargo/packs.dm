@@ -294,7 +294,7 @@
 					/obj/item/gun/energy/disabler)
 	crate_name = "disabler crate"
 
-/datum/supply_pack/security/disabler
+/datum/supply_pack/security/handcuff
 	name = "Handcuff Crate"
 	desc = "A box of 4 handcuffs, for when you really need to arrest everyone. Requires Security access to open."
 	cost = 2000
