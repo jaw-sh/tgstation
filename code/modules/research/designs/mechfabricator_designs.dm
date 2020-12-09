@@ -855,7 +855,7 @@
 /datum/design/proximity_sensor
 	name = "Proximity Sensor"
 	desc = "For all your Honkbot needs."
-	id = "pSensor"
+	id = "proximity_sensor"
 	build_type = MECHFAB
 	materials = list(/datum/material/iron = 800, /datum/material/glass = 200)
 	construction_time = 100
