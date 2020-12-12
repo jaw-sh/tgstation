@@ -25148,7 +25148,7 @@
 	name = "service delivery pipe"
 	},
 /turf/open/floor/plasteel,
-/area/crew_quarters/bar/atrium)
+/area/hallway/secondary/service)
 "aRX" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock{
@@ -29405,7 +29405,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/hallway/secondary/service)
+/area/maintenance/port/fore)
 "aYB" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -30985,10 +30985,17 @@
 /turf/open/floor/plasteel/white,
 /area/hydroponics)
 "bbR" = (
+/obj/effect/turf_decal/tile/green{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
 /turf/open/floor/plasteel,
 /area/hydroponics)
 "bbS" = (
 /obj/structure/disposalpipe/segment,
+/obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
 /area/hydroponics)
 "bbT" = (
@@ -31860,27 +31867,6 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plasteel,
 /area/hydroponics)
-"bdy" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock{
-	name = "Hydroponics Backroom";
-	req_access_txt = "35"
-	},
-/obj/structure/cable,
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
-	dir = 8
-	},
-/turf/open/floor/plasteel,
-/area/hallway/secondary/service)
 "bdB" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock{
@@ -105904,7 +105890,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/crew_quarters/bar/atrium)
+/area/hallway/secondary/service)
 "jAk" = (
 /obj/machinery/seed_extractor,
 /obj/machinery/airalarm{
@@ -107458,7 +107444,7 @@
 "lEC" = (
 /obj/effect/turf_decal/bot,
 /turf/closed/wall,
-/area/hallway/secondary/service)
+/area/hydroponics)
 "lGp" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -108758,7 +108744,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/crew_quarters/bar/atrium)
+/area/hallway/secondary/service)
 "niD" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -110957,7 +110943,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/crew_quarters/bar/atrium)
+/area/hallway/secondary/service)
 "qcx" = (
 /obj/machinery/firealarm{
 	dir = 4;
@@ -112746,7 +112732,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/crew_quarters/bar/atrium)
+/area/hallway/secondary/service)
 "ssU" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -113490,7 +113476,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/crew_quarters/bar/atrium)
+/area/hallway/secondary/service)
 "tCh" = (
 /turf/closed/wall,
 /area/science/misc_lab)
@@ -147677,7 +147663,7 @@ aVc
 aLz
 bzF
 bar
-bbR
+blk
 bbR
 beM
 bar
@@ -149989,11 +149975,11 @@ aMX
 aMX
 aMX
 aYz
-aDI
+bar
 lEC
-bdy
-aDI
-aDI
+lfX
+bar
+bar
 bhH
 bjx
 blm
