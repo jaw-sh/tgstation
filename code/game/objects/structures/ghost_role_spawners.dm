@@ -611,12 +611,13 @@
 	name = "Syndicate Ship Crew Member"
 	roundstart = FALSE
 	death = FALSE
+	random = TRUE
 	show_flavour = FALSE
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
 	short_desc = "You are a syndicate operative on old ship, stuck in hostile space."
 	flavour_text = "Your ship docks after a long time somewhere in hostile space, reporting a malfunction. You are stuck here, with Nanotrasen station nearby. Fix the ship, find a way to power it and follow your captain's orders."
-	important_info = "Obey orders given by your captain. DO NOT let the ship fall into enemy hands."
+	important_info = "Obey orders given by your captain. DO NOT let the ship fall into enemy hands. You are not an antagonist! You can only kill people who provoke you by going near your ship."
 	outfit = /datum/outfit/syndicatespace/syndicrew
 	assignedrole = ROLE_SYNDICATE_CYBERSUN
 
@@ -633,7 +634,7 @@
 	name = "Syndicate Ship Captain"
 	short_desc = "You are the captain of an old ship, stuck in hostile space."
 	flavour_text = "Your ship docks after a long time somewhere in hostile space, reporting a malfunction. You are stuck here, with Nanotrasen station nearby. Command your crew and turn your ship into the most protected fortress."
-	important_info = "Protect the ship and secret documents in your backpack with your own life."
+	important_info = "Protect the ship and secret documents in your backpack with your own life. You are not an antagonist! You can only kill people who provoke you by going near your ship."
 	outfit = /datum/outfit/syndicatespace/syndicaptain
 	assignedrole = ROLE_SYNDICATE_CYBERSUN_CAPTAIN
 
