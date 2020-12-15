@@ -33362,12 +33362,14 @@
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/glass/bowl,
 /obj/effect/turf_decal/bot,
+/obj/item/food/dough,
 /turf/open/floor/plasteel,
 /area/crew_quarters/kitchen)
 "bgu" = (
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/food/condiment/flour,
 /obj/effect/turf_decal/bot,
+/obj/item/book/manual/wiki/cooking_to_serve_man,
 /turf/open/floor/plasteel,
 /area/crew_quarters/kitchen)
 "bgv" = (
@@ -34218,15 +34220,8 @@
 /turf/open/floor/plasteel,
 /area/crew_quarters/kitchen)
 "bhQ" = (
-/obj/structure/table/reinforced,
-/obj/item/food/dough,
 /obj/effect/turf_decal/bot,
-/turf/open/floor/plasteel,
-/area/crew_quarters/kitchen)
-"bhR" = (
-/obj/structure/table/reinforced,
-/obj/item/book/manual/wiki/cooking_to_serve_man,
-/obj/effect/turf_decal/bot,
+/obj/machinery/griddle,
 /turf/open/floor/plasteel,
 /area/crew_quarters/kitchen)
 "bhS" = (
@@ -153321,7 +153316,7 @@ aYC
 bdK
 bff
 bgt
-bhR
+bhQ
 bjI
 blz
 bnq
