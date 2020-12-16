@@ -34901,7 +34901,8 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/medical/glass{
 	name = "Hydroponics";
-	req_access_txt = "35"
+	req_one_access = null;
+	req_one_access_txt = "28;35"
 	},
 /obj/machinery/navbeacon/wayfinding,
 /obj/effect/turf_decal/stripes/line{
@@ -34959,7 +34960,8 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock{
 	name = "Kitchen";
-	req_access_txt = "28"
+	req_one_access = null;
+	req_one_access_txt = "28;35"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
