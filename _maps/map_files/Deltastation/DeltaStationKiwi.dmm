@@ -31884,7 +31884,12 @@
 	pixel_y = -8;
 	req_access_txt = "28"
 	},
-/turf/open/floor/plasteel/white,
+/obj/machinery/disposal/bin,
+/obj/effect/turf_decal/delivery,
+/obj/structure/disposalpipe/trunk{
+	dir = 2
+	},
+/turf/open/floor/plasteel,
 /area/crew_quarters/kitchen)
 "bdN" = (
 /turf/closed/wall,
@@ -32510,11 +32515,8 @@
 /turf/open/floor/plasteel,
 /area/crew_quarters/kitchen)
 "bff" = (
-/obj/effect/turf_decal/delivery,
-/obj/machinery/disposal/bin,
-/obj/structure/disposalpipe/trunk{
-	dir = 4
-	},
+/obj/effect/turf_decal/bot,
+/obj/structure/table/reinforced,
 /turf/open/floor/plasteel,
 /area/crew_quarters/kitchen)
 "bfg" = (
@@ -32522,9 +32524,6 @@
 /obj/item/reagent_containers/food/condiment/flour,
 /obj/effect/turf_decal/bot,
 /obj/item/book/manual/wiki/cooking_to_serve_man,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/kitchen)
 "bfh" = (
@@ -34960,7 +34959,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock{
 	name = "Kitchen";
-	req_one_access = null;
 	req_one_access_txt = "28;35"
 	},
 /obj/structure/disposalpipe/segment{
@@ -107297,9 +107295,6 @@
 "lDu" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /turf/open/floor/plasteel/white,
 /area/crew_quarters/kitchen)
 "lEl" = (
@@ -111254,33 +111249,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/plasteel,
 /area/library)
-"qxM" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/red{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/red,
-/obj/effect/turf_decal/tile/red{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/red{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
-	dir = 8
-	},
-/obj/machinery/door/airlock/medical/glass{
-	name = "Hydroponics";
-	req_one_access = null;
-	req_one_access_txt = "28;35"
-	},
-/turf/open/floor/plasteel,
-/area/crew_quarters/kitchen)
 "qxX" = (
 /obj/effect/spawner/lootdrop/gross_decal_spawner,
 /turf/open/floor/plating,
@@ -115575,9 +115543,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 10
-	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel,
 /area/crew_quarters/kitchen)
 "wls" = (
@@ -151887,7 +151853,7 @@ bdF
 bfb
 aYC
 bdJ
-qxM
+bjC
 blt
 aYC
 tRe
