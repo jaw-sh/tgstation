@@ -71776,6 +71776,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 5
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "cKG" = (
@@ -72385,6 +72386,9 @@
 /area/hallway/primary/central)
 "cMd" = (
 /obj/effect/turf_decal/tile/neutral,
+/obj/structure/disposalpipe/segment{
+	dir = 6
+	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "cMi" = (
@@ -113138,6 +113142,13 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/chemistry)
+"tdW" = (
+/obj/effect/turf_decal/tile/neutral,
+/obj/structure/disposalpipe/segment{
+	dir = 9
+	},
+/turf/open/floor/plasteel,
+/area/hallway/primary/central)
 "tep" = (
 /obj/structure/table/reinforced,
 /obj/item/folder/red{
@@ -115849,6 +115860,13 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/prison)
+"wKh" = (
+/obj/effect/turf_decal/tile/neutral,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/hallway/primary/central)
 "wKn" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral,
@@ -159599,7 +159617,7 @@ cKD
 cKD
 bnP
 cKE
-cMd
+wKh
 cNE
 cPy
 cRa
@@ -159856,7 +159874,7 @@ cik
 cjR
 cIU
 cKF
-cMd
+tdW
 cNF
 cPy
 cRb
