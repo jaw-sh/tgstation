@@ -34960,7 +34960,8 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock{
 	name = "Kitchen";
-	req_one_access = "28;35"
+	req_one_access = null;
+	req_one_access_txt = "28;35"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -111253,6 +111254,33 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/plasteel,
 /area/library)
+"qxM" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
+	dir = 8
+	},
+/obj/machinery/door/airlock/medical/glass{
+	name = "Hydroponics";
+	req_one_access = null;
+	req_one_access_txt = "28;35"
+	},
+/turf/open/floor/plasteel,
+/area/crew_quarters/kitchen)
 "qxX" = (
 /obj/effect/spawner/lootdrop/gross_decal_spawner,
 /turf/open/floor/plating,
@@ -151859,7 +151887,7 @@ bdF
 bfb
 aYC
 bdJ
-bjC
+qxM
 blt
 aYC
 tRe
