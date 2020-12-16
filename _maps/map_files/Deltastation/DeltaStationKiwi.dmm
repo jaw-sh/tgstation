@@ -34960,8 +34960,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock{
 	name = "Kitchen";
-	req_one_access = null;
-	req_one_access_txt = "28;35"
+	req_one_access = "28;35"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -40883,8 +40882,8 @@
 	},
 /obj/effect/turf_decal/bot,
 /obj/machinery/airalarm{
-	dir = 2;
-	pixel_x = -22
+	dir = 4;
+	pixel_x = -23
 	},
 /turf/open/floor/plasteel,
 /area/hydroponics)
