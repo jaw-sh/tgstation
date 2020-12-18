@@ -1248,7 +1248,7 @@
 	dir = 4
 	},
 /obj/machinery/airalarm{
-	pixel_y = 24
+	pixel_y = 22
 	},
 /obj/machinery/iv_drip,
 /turf/open/floor/plasteel/white,
@@ -4863,7 +4863,7 @@
 	dir = 1
 	},
 /obj/machinery/airalarm{
-	pixel_y = 23
+	pixel_y = 22
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -12063,7 +12063,7 @@
 "avt" = (
 /obj/structure/table_frame/wood,
 /obj/machinery/airalarm{
-	pixel_y = 23
+	pixel_y = 22
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
@@ -12093,7 +12093,7 @@
 /obj/item/camera_film,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/machinery/airalarm{
-	pixel_y = 23
+	pixel_y = 22
 	},
 /turf/open/floor/wood,
 /area/maintenance/port/fore)
@@ -15294,7 +15294,7 @@
 /obj/item/food/grown/corn,
 /obj/item/food/grown/apple,
 /obj/machinery/airalarm{
-	pixel_y = 23
+	pixel_y = 22
 	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
@@ -16573,7 +16573,7 @@
 "aDE" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/machinery/airalarm{
-	pixel_y = 23
+	pixel_y = 22
 	},
 /turf/open/floor/plasteel/grimy,
 /area/hallway/secondary/service)
@@ -18126,7 +18126,7 @@
 /obj/item/stack/package_wrap,
 /obj/item/hand_labeler,
 /obj/machinery/airalarm{
-	pixel_y = 24
+	pixel_y = 22
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/sorting)
@@ -19726,7 +19726,7 @@
 /obj/item/folder,
 /obj/item/pen,
 /obj/machinery/airalarm{
-	pixel_y = 23
+	pixel_y = 22
 	},
 /turf/open/floor/wood,
 /area/hallway/secondary/service)
@@ -22069,7 +22069,7 @@
 /obj/item/kirbyplants/random,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/airalarm{
-	pixel_y = 23
+	pixel_y = 22
 	},
 /turf/open/floor/plating,
 /area/crew_quarters/abandoned_gambling_den/secondary)
@@ -44690,7 +44690,7 @@
 "bCB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/airalarm{
-	pixel_y = 23
+	pixel_y = 22
 	},
 /obj/machinery/camera{
 	c_tag = "Engineering - Gravity Generator Foyer";
@@ -50066,7 +50066,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/lootdrop/maintenance,
 /obj/machinery/airalarm{
-	pixel_y = 23
+	pixel_y = 22
 	},
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
@@ -52106,7 +52106,7 @@
 "bRz" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /obj/machinery/airalarm{
-	pixel_y = 23
+	pixel_y = 22
 	},
 /obj/structure/cable,
 /obj/effect/turf_decal/stripes/line{
@@ -52223,7 +52223,7 @@
 "bRK" = (
 /obj/machinery/teleport/hub,
 /obj/machinery/airalarm{
-	pixel_y = 23
+	pixel_y = 22
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
@@ -61060,7 +61060,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/lootdrop/maintenance,
 /obj/machinery/airalarm{
-	pixel_y = 23
+	pixel_y = 22
 	},
 /turf/open/floor/plating,
 /area/maintenance/port)
@@ -63842,7 +63842,7 @@
 /area/hallway/secondary/command)
 "csw" = (
 /obj/machinery/airalarm{
-	pixel_y = 23
+	pixel_y = 22
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -67708,7 +67708,7 @@
 /obj/item/clothing/under/costume/kilt,
 /obj/item/clothing/head/beret,
 /obj/machinery/airalarm{
-	pixel_y = 23
+	pixel_y = 22
 	},
 /turf/open/floor/wood,
 /area/crew_quarters/dorms)
@@ -67752,7 +67752,7 @@
 	},
 /obj/item/clothing/under/rank/civilian/curator/treasure_hunter,
 /obj/machinery/airalarm{
-	pixel_y = 23
+	pixel_y = 22
 	},
 /turf/open/floor/carpet,
 /area/crew_quarters/dorms)
@@ -71079,7 +71079,7 @@
 /area/crew_quarters/dorms)
 "cJm" = (
 /obj/machinery/airalarm{
-	pixel_y = 23
+	pixel_y = 22
 	},
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
@@ -73325,7 +73325,7 @@
 "cOu" = (
 /obj/structure/table/reinforced,
 /obj/machinery/airalarm{
-	pixel_y = 23
+	pixel_y = 22
 	},
 /obj/item/electronics/apc{
 	pixel_x = 3;
@@ -74236,7 +74236,7 @@
 /area/science/research)
 "cQA" = (
 /obj/machinery/airalarm{
-	pixel_y = 23
+	pixel_y = 22
 	},
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
@@ -89145,7 +89145,7 @@
 	},
 /obj/structure/filingcabinet/chestdrawer,
 /obj/machinery/airalarm{
-	pixel_y = 23
+	pixel_y = 22
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -105761,7 +105761,7 @@
 "jAk" = (
 /obj/machinery/seed_extractor,
 /obj/machinery/airalarm{
-	pixel_y = 23
+	pixel_y = 22
 	},
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
@@ -115030,6 +115030,24 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plasteel,
 /area/engine/storage_shared)
+"vDV" = (
+/obj/machinery/porta_turret/ai,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/machinery/airalarm{
+	dir = 4;
+	pixel_x = -23
+	},
+/turf/open/floor/plasteel/dark,
+/area/ai_monitored/turret_protected/aisat_interior)
 "vEx" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security{
@@ -115392,7 +115410,7 @@
 /area/science/xenobiology)
 "wei" = (
 /obj/machinery/airalarm{
-	pixel_y = 23
+	pixel_y = 22
 	},
 /turf/open/floor/plasteel/white,
 /area/science/misc_lab/range)
@@ -123587,7 +123605,7 @@ abK
 abJ
 bNA
 bPD
-bRE
+vDV
 bYa
 bVH
 bYa
